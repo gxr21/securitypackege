@@ -1,0 +1,31 @@
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    font-family: 'Itim', cursive;
+}
+header label{
+    color:white;
+    font-size:16px;
+    font-weight: 400px;
+    position:relative;
+    left:60px;
+}
+.links{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    position: relative;
+}
+.links li{
+    position: relative;
+}
+.links a{
+    text-decoration: none;
+    color:white;
+}

@@ -1,0 +1,10 @@
+/* ===== Button Style ===== */
+.login {
+    background-color: #052659;
+    border-radius: 30px;
+    height: 43px;
+    width: 103px;
+    color: #fff;
+    font-weight: bolder;
+    border: none;
+}

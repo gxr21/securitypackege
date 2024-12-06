@@ -1,0 +1,66 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Itim', cursive;
+    background: linear-gradient(151.43deg, #021024 28.94%, #04224C 55.68%, #083D8A 77.02%);
+}
+
+/* === main ===*/
+.checkinfo{
+    display: flex !important;
+    width: 100%;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;    
+}
+input[type="checkbox"] {
+    box-shadow: none; 
+    outline: none; 
+    appearance: none;  
+    width: 20px;      
+    height: 20px;     
+    border: 2px solid #052659; 
+    border-radius: 30px;
+    background-color: white; 
+    cursor: pointer;
+    padding-left: 0px !important;
+}
+input[type="checkbox"]:checked {
+    background-color: #052659; 
+    border-color: #052659; 
+    position: relative;
+}
+input[type="checkbox"]:checked::after {
+    content: "✔"; 
+    color: white;
+    font-size: 18px;    
+}
+.Submit{
+    background-color: #052659;
+    border-radius: 30px;
+    height: 43px;
+    width: 103px;
+    color: #fff;
+    font-weight: bolder;
+    border: none;
+    position: relative;
+    top:30px;
+}
+.padoftit{
+    padding-bottom: 0% !important;
+}
+.lengthofinput{
+    border-radius: 0px;
+    width: 40px;
+    height: 40px;
+    
+}

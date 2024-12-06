@@ -1,0 +1,14 @@
+
+input {   
+    width: 400px ;
+    height: 40px ;
+    padding: 12px 20px 0 20px;
+    border-radius: 30px ;
+    border: 1px solid #6767678f;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    line-height: 16px;
+    padding: 0;
+    padding-left: 10px;
+}
+

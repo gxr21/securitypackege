@@ -1,0 +1,160 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+overflow-x: hidden;    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Itim', cursive; 
+    background: linear-gradient(151.43deg, #021024 28.94%, #04224C 55.68%, #083D8A 77.02%);
+
+}
+section{
+    width: 100%;
+    height: max-content;
+}
+/*=== section 1 ===*/
+.Welcomemessage{
+    color:white;
+    font-size:30px;
+    font-family:'Itim', cursive; 
+    line-height: 48px;
+}
+.Shieldmessage{
+    color:#FFFFFFA1;
+    font-family: 'Itim', cursive;
+    font-size: 20px;
+    font-family: Itim;
+    line-height: 40.5px;
+}
+/*=== shield logo image ===*/
+.shieldlogo{
+    position:absolute;
+    top:0;
+    left:1;
+    width:50px;
+}
+/*=== protaction sheild image ===*/
+.sec_img{
+    background-image: url(../../assets/protection.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+/* ===section 3 ===*/
+.about_title{
+    font-family: 'Itim', cursive; 
+    font-size: 40px;
+    color: white;
+}
+.about_content{
+    font-family: 'Itim', cursive; 
+    font-size: 32px;
+    color: #B3B3B3;
+    width: 65%;
+}
+.about_trend{
+    font-family: 'Itim', cursive; 
+    font-size: 38px;
+    color:white;   
+}
+.about_button{
+    background-color: #72A8FC;
+    font-family: 'Itim', cursive; 
+    font-size: 20px;
+    color: #000;
+    border-radius: 30px;
+    height: 96px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: max-content;
+    border: none;
+    outline: none;
+    
+}
+.content-div{
+    width: 100%;
+    height: 210px;
+    background-color: #052659;
+    border-radius: 30px;
+    margin-top: 30px;
+    padding: 20px 10px 10px 20px;
+    font-family: 'Itim', cursive; 
+    font-size: 30px;
+    color: white;
+}
+.hidden {
+    display: none;
+}
+
+
+/* section 2 */
+.b1 {
+    width: 300px;
+    height: 350px;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    border-radius: 32px;
+    outline: none;
+    background-color: #1C4585;
+    border: 1px solid rgba(255, 255, 255, 0.603);
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.3);
+}
+.card-tit{
+    color: #FFD900;
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: 'Itim', cursive; 
+}
+.card-talk{
+    color: #ffffff;
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: 'Itim', cursive; 
+    text-align: center;
+}
+.card-image{
+    background-image: url(../../assets/box.png);
+    background-size: cover;
+    background-position: center;
+}
+.card-image2{
+    background-image: url(../../assets/about_security.png);
+    background-size: cover;
+    background-position: center;
+}
+.card-image3{
+    background-image: url(../../assets/any.png);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+.card-image4{
+    background-image: url(../../assets/login-password.png);
+    background-size: cover;
+    background-position: center;
+}
+.card-image5{
+    background-image: url(../../assets/Datasecurity.png);
+    background-size: cover;
+    background-position: center;
+}
+.continer {
+    display: flex;
+    width: 100%;
+
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

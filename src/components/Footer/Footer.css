@@ -1,0 +1,97 @@
+/* === footer ==== */
+footer{
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000; 
+    flex-direction: column;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_cont{
+    border-top-left-radius:60px ;
+    border-top-right-radius:60px ;
+    width: 100%;
+    height: 260px;
+    background-color: hsla(0, 0%, 85%, 0.199);
+    
+}
+.footer_cont2{
+    width: 100%;
+    background-color: hsla(0, 0%, 85%, 0.199);
+    
+}
+.line{
+    background-color: white;
+    border-radius: 50px;
+    width: 8px !important;
+    height: 80%;
+    margin-top: 20px !important;
+}
+.face-img{
+    width: 50px;
+    height: 50px;
+    background-image: url(../../assets/Facebook.png);
+    background-size: cover;
+    background-position: center;
+}
+.insta-img{
+    width: 50px;
+    height: 50px;
+    background-image: url(../../assets/Instagram.png);
+    background-size: cover;
+    background-position: center;
+}
+.tele-img{
+    width: 50px;
+    height: 50px;
+    background-image: url(../../assets/Telegram.png);
+    background-size: cover;
+    background-position: center;
+}
+.footer-title{
+    position: absolute;
+    left: 13%;
+    width: 50px;
+    color: white;
+    font-family: 'Itim', cursive;
+    
+}
+.footer-title-2{
+    position: absolute;
+    left: 46%;
+    width: 50px;
+    color: white;
+    font-family: 'Itim', cursive;
+    white-space: nowrap;
+}
+.footer-title-3{
+    position: absolute;
+    left: 77%;
+    width: 50px;
+    color: white;
+    font-family: 'Itim', cursive;
+    white-space: nowrap;
+}
+.footer-talk{
+    color: white;
+    font-family: 'Itim', cursive;
+    width: 70%;
+}
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-left: 50px;
+} 
+.footer-nav a{
+    text-decoration: none;
+    font-family: 'Itim', cursive;
+    color: white;
+}
+.Policy{
+    color: white;
+    
+}

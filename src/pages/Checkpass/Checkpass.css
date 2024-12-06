@@ -1,0 +1,81 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Itim', cursive;
+    background: linear-gradient(151.43deg, #021024 28.94%, #04224C 55.68%, #083D8A 77.02%);
+}
+
+/* === main ===*/
+.cer1{
+    position: absolute;
+    width: 250px !important;
+    border-bottom-right-radius: 100%;
+    height: 250px;
+    background-color: rgb(6, 7, 83);
+}
+.cer2{
+    position: absolute;
+    width: 250px !important;
+    height: 250px;
+    bottom: -7%;
+    right: 12.8%;
+    border-top-left-radius: 100%;
+    background-color: rgb(4, 7, 158);
+}
+.text-center{
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 360px !important;
+    height: 40px;
+
+}
+
+.check{
+    display: flex;
+    width: 60%;
+    height: 50px;
+    margin-top: -40px;
+    border-radius: 15px;
+    border: 2px rgb(135, 152, 248) solid;
+}
+.p1{
+
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: large;
+    
+}
+.p2{
+    color: #021024;
+    font-weight: bold;
+}
+.check-pass{
+    width: 100px;
+    border-radius: 30px !important;
+    font-size: 20px !important;
+    
+}
+#strengthMessage {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.weak {
+    color: red;
+}
+.medium {
+    color: orange;
+}
+.strong {
+    color: green;
+}
