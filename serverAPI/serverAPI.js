@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://3812-37-239-173-26.ngrok-free.app';
+const API_BASE_URL = 'https://0c63-37-239-173-72.ngrok-free.app';
 
 // Create an Axios instance with credentials enabled
 const apiService = axios.create({
@@ -29,6 +29,16 @@ export const postData = async (endpoint, data) => {
     return response.data;
   } catch (error) {
     console.error('Error posting data:', error);
+    throw error;
+  }
+};
+// DELETE request with cookies
+export const DELETEData = async (endpoint, data) => {
+  try {
+    const response = await apiService.delete(endpoint, data);
+    return response.data;
+  } catch (error) {
+    console.error('Error deleting data:', error);
     throw error;
   }
 };

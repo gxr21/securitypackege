@@ -4,18 +4,20 @@ import InputAuth2 from '../../components/InputAuth2/InputAuth2';
 import ButtonAuth from '../../components/ButtonAuth/ButtonAuth';
 import Card from '../../components/Card/Card';
 import { useState } from 'react';
-import { postData } from '../../utils/utils';
+import { postData } from '../../../serverAPI/serverAPI';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSignup = async () => {
         try {
             const data = { name, email, password };
-            const response = await postData('/api/authentication/createAccount', data); // Replace with your endpoint
-            console.log('Response:', response); // Log the server's response
+            await postData('/api/authentication/createAccount', data); // Replace with your endpoint
+            navigate('/Code');
         } catch (err) {
             console.error('Error during signup:', err); // Log the error
         }
@@ -50,6 +52,9 @@ const Signup = () => {
                     text="Sign Up"
                     onClick={handleSignup}
                 />
+                <div>
+                        <a href="/login" className="link">alredy have an account? </a>
+                </div>
             </div>
 
             <div className="col px-0 blue-placement-2 ">

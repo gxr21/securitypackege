@@ -2,13 +2,30 @@ import React, { useState } from "react";
 import "./Home.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import { useNavigate } from 'react-router-dom';
+
 function Home() {
     const [visibleDiv, setVisibleDiv] = useState("");
-
     const showDiv = (divId) => {
         setVisibleDiv(divId);
     };
+    const navigate = useNavigate(); // Initialize the navigation hook
 
+    const page1 = () => {
+        navigate('/Generatepass'); // Replace '/target-page' with your desired route
+    };
+    const page2 = () => {
+        navigate('/SavePass'); // Replace '/target-page' with your desired route
+    };
+    const page3 = () => {
+        navigate('/Checkpass'); // Replace '/target-page' with your desired route
+    };
+    const page4 = () => {
+        navigate('/Roadmap'); // Replace '/target-page' with your desired route
+    };
+    const page5 = () => {
+        navigate('/AboutSec'); // Replace '/target-page' with your desired route
+    };
     return (
         <div style={{height:"100vh"}}>
             <Header></Header>
@@ -30,9 +47,9 @@ function Home() {
             </section>
 
             {/* CARDS 2nd SECTION */}
-            <section className="px-5 d-flex justify-content-center">
+            <section className="px-5 d-flex justify-content-center" id="cards">
                 <div className="continer">
-                    <button className="b1">
+                    <button  onClick={page1}  className="b1">
                         <div className="row w-100" style={{ height: "25%" }}>
                             <div className="col-3 card-image"></div>
                             <div className="col-9 card-tit">Generate password</div>
@@ -41,7 +58,7 @@ function Home() {
                             It will provides all the tools you need to generate a strong and reliable password.
                         </div>
                     </button>
-                    <button className="b1">
+                    <button  onClick={page2} className="b1">
                         <div className="row w-100" style={{ height: "25%" }}>
                             <div className="col-3 card-image2"></div>
                             <div className="col-9 card-tit">Save password</div>
@@ -50,7 +67,7 @@ function Home() {
                             To save your password, It lets you securely store your password for future use.
                         </div>
                     </button>
-                    <button className="b1">
+                    <button  onClick={page3} className="b1">
                         <div className="row w-100" style={{ height: "25%" }}>
                             <div className="col-3 card-image3"></div>
                             <div className="col-9 card-tit">password strength</div>
@@ -59,7 +76,7 @@ function Home() {
                             "To check your password strength, It helps you ensure your password is strong and secure."
                         </div>
                     </button>
-                    <button className="b1">
+                    <button  onClick={page4} className="b1">
                         <div className="row w-100" style={{ height: "25%" }}>
                             <div className="col-3 card-image4"></div>
                             <div className="col-9 card-tit">Security RoadMap</div>
@@ -68,7 +85,7 @@ function Home() {
                             To review your security plan, It guides you in enhancing your overall security.
                         </div>
                     </button>
-                    <button className="b1">
+                    <button  onClick={page5}  className="b1">
                         <div className="row w-100" style={{ height: "25%" }}>
                             <div className="col-3 card-image5"></div>
                             <div className="col-9 card-tit">About security</div>
@@ -81,7 +98,7 @@ function Home() {
             </section>
 
             {/* 3rd SECTION */}
-            <section className="about_sec px-5">
+            <section className="about_sec px-5" id="SECURITY">
                 <p className="about_title">WHAT IS SECURITY ?</p>
                 <p className="about_content">
                     "Security is the practice of protecting information, systems, and assets from threats or unauthorized access.
@@ -89,7 +106,7 @@ function Home() {
                     Strong security measures help maintain trust and prevent breaches in both physical and digital
                     environments."
                 </p>
-                <p className="about_trend">Some of the top trending topics in cybersecurity for 2024</p>
+                <p className="about_trend" id="trends">Some of the top trending topics in cybersecurity for 2024</p>
                 <div className="about_select">
                     <button
                         onClick={() => showDiv("div1")}

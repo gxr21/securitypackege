@@ -36,8 +36,34 @@ body {
     height: 540px;
 }
 .col-cell{
+    height: 50px;
+    text-align: center;
     border:1px solid #000;
+    
 }
+.t45{
+    overflow: auto;
+    overflow-y: hidden;
+}
+.trrr{
+    overflow:auto;
+    overflow-y: hidden;
+    height: 100%;
+}
+.delete-cell{
+    display: flex;
+    justify-content: center;
+    
+}
+.delete-button{
+    border: none;
+    color: white;
+    background-color: red;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
 .cell-corner-1{
     border-top-left-radius: 35px;
 }

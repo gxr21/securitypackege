@@ -21,7 +21,7 @@ footer{
 .footer_cont2{
     width: 100%;
     background-color: hsla(0, 0%, 85%, 0.199);
-    
+    z-index: 1;
 }
 .line{
     background-color: white;
@@ -93,5 +93,6 @@ footer{
 }
 .Policy{
     color: white;
-    
+display: block;
+    z-index: 1;
 }

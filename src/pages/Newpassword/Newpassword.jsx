@@ -4,22 +4,22 @@ import Card from '../../components/Card/Card';
 import InputAuth from '../../components/InputAuth/InputAuth';
 import ButtonAuth from '../../components/ButtonAuth/ButtonAuth';
 import Title from '../../components/Title/Title';
-import { postData } from '../../utils/utils';
-
+import { postData } from '../../../serverAPI/serverAPI';
+import { useParams } from "react-router-dom";
 const Newpassword = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-
+  const { token } = useParams();
   const handlePasswordChange = async () => {
     if (password !== confirmPassword) {
       alert('Passwords do not match. Please try again.');
       return;
     }
-
+    
     try {
-      const data = { password };
-      const response = await postData('/api/authentication/set/newpassword', data); // Replace with your endpoint
-      console.log('Response:', response);
+      const data = { token , password };
+      const response = await postData('/api/authentication/setPassword', data); // Replace with your endpoint
+      
     } catch (error) {
       console.error('Error changing password:', error);
     }

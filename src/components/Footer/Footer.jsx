@@ -28,18 +28,18 @@ const Footer = () => {
             <div className="col-1 line px-0"></div>
             <div className="col">
               <nav className="footer-nav">
-                <a href="#home">Home</a>
-                <a href="#about">content</a>
-                <a href="#services">explore</a>
-                <a href="#contact">about us</a>
-                <a href="#contact">Policy</a>
+                <a href="/">Home</a>
+                <a href="#cards">content</a>
+                <a href="#SECURITY">explore</a>
+                <a href="#trends">trends</a>
+                <a href="/Policy">Policy</a>
               </nav>
             </div>
           </div>
         </div>
       </div>
       <div className="footer_cont2" style={{ textAlign: "center" }}>
-        <a className="Policy">Privacy Policy and Security Policy in our website</a>
+        <a  href='/Policy' className="Policy">Privacy Policy and Security Policy in our website</a>
       </div>
     </footer>
   );

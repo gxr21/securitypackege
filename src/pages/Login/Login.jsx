@@ -4,17 +4,24 @@ import InputAuth from '../../components/InputAuth/InputAuth';
 import ButtonAuth from '../../components/ButtonAuth/ButtonAuth';
 import Title from '../../components/Title/Title';
 import Card from '../../components/Card/Card';
-import { postData } from '../../utils/utils';
+import { postData } from '../../../serverAPI/serverAPI';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         try {
             const data = { email, password };
             const response = await postData('/api/authentication/logToAccount', data); // Replace '/login' with your endpoint
-            console.log('Response:', response);     // Log the server response
+            if (response.state === 'success') {
+                // Store JWT in localStorage
+                const user = { token: response.data.JWT };
+                localStorage.setItem('user', JSON.stringify(user));
+                navigate('/')
+            }
         } catch (err) {
             console.error('Login Error:', err); // Log errors
         }
@@ -69,7 +76,10 @@ const Login = () => {
 
                     {/* Forgot Password Link */}
                     <div>
-                        <a href="#" className="link"> Did you forget the password? </a>
+                        <a href="/Change" className="link"> Did you forget the password? </a>
+                    </div>
+                    <div>
+                        <a href="/signup" className="link"> creat a new account? </a>
                     </div>
                 </div>
             </div>

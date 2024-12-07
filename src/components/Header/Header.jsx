@@ -10,16 +10,16 @@ const Header = () => {
       <nav>
         <ul className="links">
           <li>
-            <a href="#">home</a>
+            <a href="/">home</a>
           </li>
           <li>
-            <a href="#">content</a>
+            <a href="#cards">content</a>
           </li>
           <li>
-            <a href="#">Explore</a>
+            <a href="#SECURITY">Explore</a>
           </li>
           <li>
-            <a href="#">about us</a>
+            <a href="#trends">trends</a>
           </li>
         </ul>
       </nav>

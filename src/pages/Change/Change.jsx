@@ -4,16 +4,20 @@ import Card from '../../components/Card/Card';
 import InputAuth from '../../components/InputAuth/InputAuth';
 import ButtonAuth from '../../components/ButtonAuth/ButtonAuth';
 import Title from '../../components/Title/Title';
-import { postData } from '../../utils/utils';
+import { postData } from '../../../serverAPI/serverAPI';
+import { useNavigate } from 'react-router-dom';
 
 const Change = () => {
   const [email, setEmail] = useState('');
-
+  const navigate = useNavigate();
   const handleChange = async () => {
     try {
       const data = { email };
-      const response = await postData('/api/authentication/resetPassword', data); // Replace '/password' with your endpoint
-      console.log('Response:', response); // Log the server response
+      await postData('/api/authentication/resetPassword', data);
+      alert("please check your email")
+      // const user = JSON.parse(localStorage.getItem('user'))
+      //   await postData('/api/authentication/conformEmail', user); 
+      navigate('/login');
     } catch (err) {
       console.error('Error:', err); // Log errors
     }
@@ -32,7 +36,7 @@ const Change = () => {
         </div>
       </div>
       {/* Right Column */}
-      <div className="Ncol px-5 pt-5 noLeft">
+      <div className="col px-5 pt-5 noLeft">
         <div style={{ width: "90%" }}>
           <Title
             text="CHANGE PASSWORD"

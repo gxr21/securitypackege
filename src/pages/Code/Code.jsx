@@ -4,7 +4,7 @@ import Card from '../../components/Card/Card';
 import ButtonAuth from '../../components/ButtonAuth/ButtonAuth';
 import Title from '../../components/Title/Title';
 import { useState } from 'react';
-import { postData } from '../../utils/utils';
+import { postData } from '../../../serverAPI/serverAPI';
 
 const Code = () => {
   const [inputs, setInputs] = useState(['', '', '', '']); // Array to store individual input values
@@ -19,8 +19,10 @@ const Code = () => {
   const email = "watchfor44@gmail.com"
   const handleCod = async () => {
     try {
-        const data = {code,email} ;
-        const response = await postData('/api/authentication/requestEmailConformationCode', data); 
+      const user = JSON.parse(localStorage.getItem('user')); // Retrieve the user object
+        const jwt = user?.token;
+        const data2 = {jwt,code} ;
+        await postData('/api/authentication/conformEmail', data2); 
         console.log('Response:', response);     // Log the server response
     } catch (err) {
         console.error('Login Error:', err); // Log errors
@@ -42,10 +44,10 @@ const Code = () => {
       <div className="col px-5 pt-5 noLeft " >
         <div style={{ width: "90%" }}>
           <Title
-            text="CHANGE PASSWORD"
-            desc="change your password by code"
+            text="Verify your acount"
+            desc="help us to make our website more secure"
           />
-          <p className="tc">Please enter the code</p>
+          <p className="tc">Please enter the code you reseved from Email</p>
           <div className="bcode">
           <div>
             {inputs.map((input, index) => (

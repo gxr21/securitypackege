@@ -11,11 +11,28 @@ import Policy from "./pages/Policy/Policy"
 import SavePass from "./pages/SavePass/SavePass"
 import Checkpass from "./pages/Checkpass/Checkpass"
 import Generatepass from "./pages/Generatepass/Generatepass"
+import { BrowserRouter, Routes,Route } from 'react-router-dom'
+import ProtectedRoutes from './utils/utils'
 function App() {
   return (
-    <>
-      <Code/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Login/>} path='/login'></Route>
+        <Route element={<Signup/>} path='/signup'></Route>
+        <Route element={<Change/>} path='/Change'></Route>
+        <Route element={<Code/>} path='/Code'></Route>
+        <Route element={<Newpassword/>} path='/newpassword/:token' ></Route>
+        <Route element={<ProtectedRoutes/>}>
+        <Route element={<Home/>} path='/'></Route>
+        <Route element={<Roadmap/>} path='/Roadmap'></Route>
+        <Route element={<AboutSec/>} path='/AboutSec'></Route>
+        <Route element={<Policy/>} path='/Policy'></Route>
+        <Route element={<SavePass/>} path='/SavePass'></Route>
+        <Route element={<Checkpass/>} path='/Checkpass'></Route>
+        <Route element={<Generatepass/>} path='/Generatepass'></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
